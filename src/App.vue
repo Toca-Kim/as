@@ -6,7 +6,7 @@
       flat
     >
       <v-container class="py-0 fill-height">
-        
+       
   <!--лого  -->
         <v-img  src="logo-default-130x42.png"
           color="blue-grey lighten-5"
@@ -15,7 +15,8 @@
           contain="true"
           max-height="42"
         ></v-img>
-          
+ 
+
         <v-btn
           v-for="link in links"
           :key="link"
@@ -25,8 +26,8 @@
         </v-btn>
 
         <v-spacer></v-spacer>
-cxxsdc<!-- поиск -->
-        <v-responsive max-width="260">
+<!-- поиск -->
+        <v-responsive max-width="0">
           <v-text-field
             dense
             flat
@@ -43,9 +44,9 @@ cxxsdc<!-- поиск -->
         <v-row>
           <v-col cols="2">
             <v-sheet rounded="lg">
-              <v-list color="transparent">
+              
                 <v-list-item
-                  v-for="n in 5"
+                  v-for="n in 0"
                   :key="n"
                   link
                 >
@@ -56,20 +57,6 @@ cxxsdc<!-- поиск -->
                     </v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
-
-                <v-divider class="my-2"></v-divider>
-
-                <v-list-item
-                  link
-                  color="grey lighten-4"
-                >
-                  <v-list-item-content>
-                    <v-list-item-title>
-                      Refresh
-                    </v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
             </v-sheet>
           </v-col>
 
@@ -84,9 +71,84 @@ cxxsdc<!-- поиск -->
                    v-for="(item,i) in items"
                    :key="i"
                    :src="item.src"
-               ></v-carousel-item>
+               >
+              <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <h1 class="display-1 font-weight-thin mb-4 blue--text darken-4" >
+          Vuetify
+        </h1>
+        <h4 class="subheading">
+          Build your application today!
+        </h4>
+      </v-col>
+    </v-row>
+               </v-carousel-item>
                  </v-carousel>
-           карври
+                 ырвио
+          <v-container>
+        <v-row>
+          <v-col
+            v-for="n in 3"
+            :key="n"
+            cols="4"
+          >
+            <v-card height="200">
+              <h1 class="display-1 font-weight-thin mb-4">
+          Vuetify
+        </h1>
+        <h4 class="subheading">
+          Build your application today!
+        </h4>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+<h1 class="text-center">Почему стоит выбрать нас</h1>
+<v-container>
+        <v-row>
+          <v-col
+            v-for="n in 6"
+            :key="n"
+            cols="4"
+          >
+            <v-card height="200">
+              <h1 class="display-1 font-weight-thin mb-4">
+          Vuetify
+        </h1>
+        <h4 class="subheading">
+          Build your application today!
+        </h4>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+           <v-parallax
+    dark
+    src="../src/plugins/bg-image-2-1920x1304.jpg"
+  >
+    <v-row
+      align="center"
+      justify="center"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <h1 class="display-1 font-weight-thin mb-4">
+          Vuetify
+        </h1>
+        <h4 class="subheading">
+          Build your application today!
+        </h4>
+      </v-col>
+    </v-row>
+  </v-parallax>
             </v-sheet>
           </v-col>
         </v-row>
@@ -109,17 +171,73 @@ cxxsdc<!-- поиск -->
      Наша компания разрабатывает высокотехнологичные,<br>
     современные веб и мобильные приложения для бизнеса с 2006 года.
       </v-card-text>
+     
+<v-form class="white--text pt-0 text-right" >
+    <v-container>
+      <v-row>
+        <v-col
+          cols="12"
+          sm="3"
+        >
+          <v-text-field
+            v-model="title"
+            :rules="[rules.required, rules.counter]"
+            label="Title"
+            counter
+            maxlength="10"
+          ></v-text-field>
+        </v-col>
 
+        <v-col
+          cols="12"
+          sm="3"
+        >
+          <v-text-field
+            v-model="email"
+            :rules="[rules.required, rules.email]"
+            label="E-mail"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-form>
+  
+  
+
+ <v-card-text class="white--text pt-0 text-right">
+        <br>
+        <h3 ><u>ПОЛЕЗНЫЕ ССЫЛКИС</u></h3><br>
+        <ul>
+          <a href="http://ritg.ru/directions/software_development/" >
+   <li class="white--text pt-0 text-right" >Разработка ПО</li>
+   </a>
+   <a href="http://ritg.ru/directions/mobile/">
+   <li class="white--text pt-0 text-right">Мобильная разработка</li>
+   </a>
+   <a href="http://ritg.ru/directions/it_consulting/">
+   <li class="white--text pt-0 text-right">ИТ-консалтинг</li>
+   </a>
+   <a href="http://ritg.ru/about_ritg/">
+   <li class="white--text pt-0 text-right">О компании</li>
+   </a>
+   <a href="http://ritg.ru/projects/">
+   <li class="white--text pt-0 text-right">Портфолио</li>
+   </a>
+   <a href="http://ritg.ru/contacts/">
+   <li class="white--text pt-0 text-right">Контакты</li>
+   </a>
+  </ul>
+      </v-card-text>
         <v-spacer></v-spacer>
 
         <v-btn
           v-for="icon in icons"
           :key="icon"
-          class="mx-4"
+          class="mx-6"
           dark
           icon
         >
-          <v-icon size="24px">
+          <v-icon size="30px">
             {{ icon }}
           </v-icon>
         </v-btn>
@@ -129,6 +247,7 @@ cxxsdc<!-- поиск -->
         {{ new Date().getFullYear() }} — <strong>RITG</strong>
       </v-card-text>
     </v-card>
+    
   </v-footer>
     </v-main>
   </v-app>
@@ -141,10 +260,12 @@ cxxsdc<!-- поиск -->
   export default {
     data: () => ({
       links: [
-        'Dashboard',
-        'Messages',
-        'Profile',
-        'Updates',
+        'ГЛАВНАЯ',
+        'О КОМПАНИИ',
+        'УСЛУГИ',
+        'ПОРТФОЛИО',
+        'ВАКАНСИИ',
+        'КОНТАКТЫ',
       ],
        icons: [
         'mdi-facebook',
@@ -159,11 +280,21 @@ cxxsdc<!-- поиск -->
           {
             src: require('../src/plugins/slider-classic-slide-2-1920x710.jpg'),
           },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+        ],
+        title: 'Preliminary report',
+        email: '',
+        rules: {
+          required: value => !!value || 'Required.',
+          counter: value => value.length <= 20 || 'Max 20 characters',
+          email: value => {
+            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            return pattern.test(value) || 'Invalid e-mail.'
           },
-        ]
+        },
     }),
+     
+    
+
   }
 
 </script>
