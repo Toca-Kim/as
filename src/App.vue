@@ -8,7 +8,7 @@
       <v-container class="py-0 fill-height">
        
   <!--лого  -->
-        <v-img  src="logo-default-130x42.png"
+        <v-img  src="../src/plugins/logo-default-130x42.png"
           color="blue-grey lighten-5"
           class="mr-1"
          
@@ -109,25 +109,107 @@
           </v-col>
         </v-row>
       </v-container>
+      
 <h1 class="text-center">Почему стоит выбрать нас</h1>
-<v-container>
-        <v-row>
-          <v-col
-            v-for="n in 6"
-            :key="n"
-            cols="4"
-          >
-            <v-card height="200">
-              <h1 class="display-1 font-weight-thin mb-4">
-          Vuetify
-        </h1>
-        <h4 class="subheading">
-          Build your application today!
-        </h4>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
+<v-container grid-list-xl>
+  <v-layout align-center justify-center row reverse fill-height/>
+    <v-layout v-bind="binding">
+      
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+            <v-icon > mdi-thumb-up-outline</v-icon>
+             </v-btn>
+          <v-card-text>
+            <h3>Лидеры IT-рынка</h3><br>
+                  <p>Победители Всероссийских<br>
+                  конкурсов, в том числе <br>
+                   и РЕЙТИНГА РУНЕТА.</p>
+          </v-card-text>
+          <v-card height="50"></v-card>
+        </v-card>
+      </v-flex>
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+             <v-icon>mdi-card-account-details-outline</v-icon>
+            </v-btn>
+          <v-card-text>
+            <h3>Профессиональная<br> команда разработчиков</h3><br>
+            <p>В RITG работают эксперты<br>
+               и профессионалы своего дела. <br>
+            Вместе мы решим любую задачу.</p>
+          </v-card-text>
+           <v-card height="30"></v-card>
+        </v-card>
+      </v-flex>
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+              <v-icon>mdi-trophy-outline</v-icon>
+             </v-btn>
+          <v-card-text>
+            <h3>Разрабатываем<br> лучшие решения</h3><br>
+            <p>Наши проекты отмечены<br>
+             наградами международного уровня.</p>
+          </v-card-text>
+        </v-card>
+        <v-card height="50" ></v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+
+<v-container grid-list-xl>
+  <v-layout align-center justify-center row reverse fill-height/>
+    <v-layout v-bind="binding">
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+            <v-icon>mdi-cellphone-link</v-icon>
+             </v-btn>
+          <v-card-text>
+            <h3>Используем продвинутые<br> технологии</h3><br>
+                  <p>Применяем методы <br>
+                  машинного обучения и <br>
+                  нейросети для решения задач</p>
+          </v-card-text>
+          <v-card height="50"></v-card>
+        </v-card>
+      </v-flex>
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+             <v-icon>mdi-account-group-outline</v-icon>
+            </v-btn>
+          <v-card-text>
+            <h3>Гибкий подход</h3><br>
+            <p>Мы всегда поддерживаем<br>
+             Ваши идеи, создаем<br>
+              оригинальные, интуитивно<br>
+               понятные и удобные<br>
+               решения для них.<br>
+                Ориентируемся на Agile, Scrum.</p>
+          </v-card-text>
+           <v-card height="10"></v-card>
+        </v-card>
+      </v-flex>
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+              <v-icon>mdi-headset</v-icon>
+             </v-btn>
+          <v-card-text >
+            <h3>Техническая <br>поддержка</h3><br>
+            <p>Мы не бросаем Вас по итогам<br>
+             работ, а осуществляем <br>
+             техническую поддержку</p>
+          </v-card-text>
+        </v-card>
+        <v-card height="50"></v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+      Erzghj
            <v-parallax
     dark
     src="../src/plugins/bg-image-2-1920x1304.jpg"
