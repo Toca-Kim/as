@@ -50,7 +50,7 @@
                   :key="n"
                   link
                 >
-                cdqwe<!--бокавухи-->
+              <!--бокавухи-->
                   <v-list-item-content>
                     <v-list-item-title>
                       List Item {{ n }}
@@ -66,49 +66,56 @@
               rounded="lg"
             >
               <!--середина  -->
-              <v-carousel hide-delimiters>
-                <v-carousel-item 
-                   v-for="(item,i) in items"
-                   :key="i"
-                   :src="item.src"
-               >
-              <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        <h1 class="display-1 font-weight-thin mb-4 blue--text darken-4" >
-          Vuetify
-        </h1>
-        <h4 class="subheading">
-          Build your application today!
-        </h4>
-      </v-col>
-    </v-row>
-               </v-carousel-item>
-                 </v-carousel>
-                 ырвио
-          <v-container>
-        <v-row>
-          <v-col
-            v-for="n in 3"
-            :key="n"
-            cols="4"
-          >
-            <v-card height="200">
-              <h1 class="display-1 font-weight-thin mb-4">
-          Vuetify
-        </h1>
-        <h4 class="subheading">
-          Build your application today!
-        </h4>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
+              <h1 class="text-center">Наши услуги</h1>
+             <v-container grid-list-xl >
+  <v-layout align-center justify-center row reverse fill-height/>
+    <v-layout v-bind="binding">
+      
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+            <v-icon > mdi-cog-outline</v-icon>
+             </v-btn>
+          <v-card-text>
+            <h3>Разработка ПО</h3><br>
+                  <p>Разрабатываем многофункциональное<br>
+                   ПО на заказ, внедряем в работу и <br>
+                   сопровождаем.</p>
+          </v-card-text>
+          <v-card height="20"></v-card>
+        </v-card>
+      </v-flex>
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+             <v-icon>mdi-laptop</v-icon>
+            </v-btn>
+          <v-card-text>
+            <h3>Мобильная разработка</h3><br>
+            <p>Разрабатываем мобильные <br>
+             приложения, которые помогут вывести <br>
+             ваш бизнес на новый уровень.</p>
+          </v-card-text>
+           <v-card height="20"></v-card>
+        </v-card>
+      </v-flex>
+      <v-flex>
+        <v-card grey lighten-5="primary">
+           <v-btn icon>
+              <v-icon>mdi-pencil-ruler</v-icon>
+             </v-btn>
+          <v-card-text>
+            <h3>ИТ-консалтинг</h3><br>
+            <p>Наша работа позволит оптимизировать<br>
+             Ваши затраты на внедрение <br>
+             информационных технологий и<br>
+              ИТ-решений в задачах Вашего бизнеса.</p>
+          </v-card-text>
+        </v-card>
+        
+      </v-flex>
+    </v-layout>
+  </v-container>
       
 <h1 class="text-center">Почему стоит выбрать нас</h1>
 <v-container grid-list-xl>
@@ -209,7 +216,7 @@
       </v-flex>
     </v-layout>
   </v-container>
-      Erzghj
+     
            <v-parallax
     dark
     src="../src/plugins/bg-image-2-1920x1304.jpg"
