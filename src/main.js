@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import app1 from './app1.vue'
+import carousel from './carousel.vue'
 //import app2 from './app2.vue'
 import app3 from './app3.vue'
 import vuetify from './plugins/vuetify';
@@ -14,8 +14,8 @@ new Vue({
 
 new Vue({
   vuetify,
-  render: h => h(app1)
-}).$mount('#app1')
+  render: h => h(carousel)
+}).$mount('#carousel')
 
 //new Vue({
  // vuetify,

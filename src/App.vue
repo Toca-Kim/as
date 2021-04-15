@@ -230,7 +230,7 @@
         cols="12"
       >
         <h1 class="display-1 font-weight-thin mb-4">
-          Vuetify
+          тут должна быть анимация и этот эелемент должен быть вынесен в отдельный элемент
         </h1>
         <h4 class="subheading">
           Build your application today!
@@ -260,60 +260,50 @@
      Наша компания разрабатывает высокотехнологичные,<br>
     современные веб и мобильные приложения для бизнеса с 2006 года.
       </v-card-text>
-     
-<v-form class="white--text pt-0 text-right" >
-    <v-container>
-      <v-row>
-        <v-col
-          cols="12"
-          sm="3"
-        >
-          <v-text-field
-            v-model="title"
-            :rules="[rules.required, rules.counter]"
-            label="Title"
-            counter
-            maxlength="10"
-          ></v-text-field>
-        </v-col>
 
-        <v-col
-          cols="12"
-          sm="3"
-        >
-          <v-text-field
-            v-model="email"
-            :rules="[rules.required, rules.email]"
-            label="E-mail"
-          ></v-text-field>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-form>
+     <input name="phone" :value="phoneNumber" @input="handleUserInput" />
+<div class="container" id="app">
+  {{phone|mask}}
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><span>+7</span></span>
+         <input type="tel" 
+         v-model="phone"
+         name="phone"
+         id="phone"
+         placeholder="(***) ***-****"
+         autocomplete="tel"
+         maxlength="14"
+         class="form-control"
+         pattern="[(][0-9]{3}[)] [0-9]{3}-[0-9]{4}" required />
+         
+</div>
+</div>
+</div>
   
   
 
- <v-card-text class="white--text pt-0 text-right">
+ <v-card-text class="white--text pt-0 ">
         <br>
         <h3 ><u>ПОЛЕЗНЫЕ ССЫЛКИС</u></h3><br>
         <ul>
           <a href="http://ritg.ru/directions/software_development/" >
-   <li class="white--text pt-0 text-right" >Разработка ПО</li>
+   <li class="white--text pt-0 " >Разработка ПО</li>
    </a>
    <a href="http://ritg.ru/directions/mobile/">
-   <li class="white--text pt-0 text-right">Мобильная разработка</li>
+   <li class="white--text pt-0 ">Мобильная разработка</li>
    </a>
    <a href="http://ritg.ru/directions/it_consulting/">
-   <li class="white--text pt-0 text-right">ИТ-консалтинг</li>
+   <li class="white--text pt-0 ">ИТ-консалтинг</li>
    </a>
    <a href="http://ritg.ru/about_ritg/">
-   <li class="white--text pt-0 text-right">О компании</li>
+   <li class="white--text pt-0 ">О компании</li>
    </a>
    <a href="http://ritg.ru/projects/">
-   <li class="white--text pt-0 text-right">Портфолио</li>
+   <li class="white--text pt-0 ">Портфолио</li>
    </a>
    <a href="http://ritg.ru/contacts/">
-   <li class="white--text pt-0 text-right">Контакты</li>
+   <li class="white--text pt-0 ">Контакты</li>
    </a>
   </ul>
       </v-card-text>
@@ -370,20 +360,16 @@
             src: require('../src/plugins/slider-classic-slide-2-1920x710.jpg'),
           },
         ],
-        title: 'Preliminary report',
-        email: '',
-        rules: {
-          required: value => !!value || 'Required.',
-          counter: value => value.length <= 20 || 'Max 20 characters',
-          email: value => {
-            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            return pattern.test(value) || 'Invalid e-mail.'
-          },
-        },
-    }),
+      
+       phoneNumber: '', 
+       methods: {
+         handleUserInput(input) {
+          var replacedInput = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+         this.value = !replacedInput[2] ? replacedInput[1] : '(' + replacedInput[1] + ') ' + replacedInput[2] + (replacedInput[3] ? '-' + replacedInput[3] : '');
+             },
+           },
+        }),
+     }
      
-    
-
-  }
 
 </script>
