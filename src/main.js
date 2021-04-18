@@ -20,7 +20,7 @@ new Vue({
 //new Vue({
  // vuetify,
  // render: h => h(app2)
-//}).$mount('#app2')
+//).$mount('#app2')
 
 new Vue({
   vuetify,

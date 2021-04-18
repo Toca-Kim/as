@@ -1,5 +1,5 @@
 <template>
-<v-div class="carousel">
+<div class="carousel">
 <v-carousel hide-delimiters class="carousel"> 
 <v-carousel-item 
 v-for="(item,i) in items" 
@@ -9,12 +9,10 @@ v-for="(item,i) in items"
 <v-row 
    align="center" 
    justify="center" 
-   height="500" 
 > 
+<div class="text-center">
 <v-col 
    class="text-center" 
-
-
 > 
 <h1 class="display-1 font-weight-thin mb-4 blue--text darken-4" > 
   тут должен быть текст
@@ -23,10 +21,11 @@ v-for="(item,i) in items"
 тут тоже но типо описание
 </h4> 
 </v-col> 
+</div>
 </v-row> 
 </v-carousel-item> 
 </v-carousel>
-</v-div>
+</div>
 </template>
 <script>
  export default {

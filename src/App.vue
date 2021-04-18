@@ -2,47 +2,42 @@
   <v-app id="inspire">
     <v-app-bar
       app
-      color="white"
+      color="transparent"
       flat
     >
-      <v-container class="py-0 fill-height">
+     <header-view > 
+     <div class="header">
+        <v-container class="py-0 fill-height">
        
-  <!--лого  -->
-        <v-img  src="../src/plugins/logo-default-130x42.png"
-          color="blue-grey lighten-5"
-          class="mr-1"
-         
-          contain="true"
-          max-height="42"
+                          <!--лого  -->
+        <v-div class="page-loader-body">
+           <v-img  src="../src/plugins/logo-default-130x42.png"
+               color="blue-grey lighten-5"
+               class="mr-1"
+               contain="true"
+               max-height="42"
+               max-width="130" 
         ></v-img>
- 
-
-        <v-btn
+      </v-div>
+          <v-div > 
+          
+              <v-btn
           v-for="link in links"
           :key="link"
           text
         >
           {{ link }}
         </v-btn>
-
-        <v-spacer></v-spacer>
-<!-- поиск -->
-        <v-responsive max-width="0">
-          <v-text-field
-            dense
-            flat
-            hide-details
-            rounded
-            solo-inverted
-          ></v-text-field>
-        </v-responsive>
+              </v-div>
       </v-container>
+    </div>
+     </header-view>
     </v-app-bar>
 
     <v-main class="grey lighten-3">
       <v-container>
         <v-row>
-
+      
           <v-col>
             <v-sheet
               min-height="70vh"
@@ -65,6 +60,14 @@
                    ПО на заказ, внедряем в работу и <br>
                    сопровождаем.</p>
           </v-card-text>
+         <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+         ПОДРОБНЕЕ
+        </v-btn>
           <v-card height="20"></v-card>
         </v-card>
       </v-flex>
@@ -79,6 +82,14 @@
              приложения, которые помогут вывести <br>
              ваш бизнес на новый уровень.</p>
           </v-card-text>
+          <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+         ПОДРОБНЕЕ
+        </v-btn>
            <v-card height="20"></v-card>
         </v-card>
       </v-flex>
@@ -94,6 +105,15 @@
              информационных технологий и<br>
               ИТ-решений в задачах Вашего бизнеса.</p>
           </v-card-text>
+          <v-btn
+          color="primary"
+          dark
+          v-bind="attrs"
+          v-on="on"
+        >
+          ПОДРОБНЕЕ
+        </v-btn>
+        <v-card height="2"></v-card>
         </v-card>
         
       </v-flex>
@@ -332,8 +352,8 @@
        icons: [
         'mdi-facebook',
         'mdi-twitter',
-        'mdi-linkedin',
         'mdi-instagram',
+        'mdi-vk',
       ],
         items: [
           {
@@ -345,12 +365,7 @@
         ],
       
        phoneNumber: '', 
-       methods: {
-         handleUserInput(input) {
-          var replacedInput = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-         this.value = !replacedInput[2] ? replacedInput[1] : '(' + replacedInput[1] + ') ' + replacedInput[2] + (replacedInput[3] ? '-' + replacedInput[3] : '');
-             },
-           },
+       
         }),
      }
      
